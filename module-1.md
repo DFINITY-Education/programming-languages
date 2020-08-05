@@ -13,7 +13,7 @@
 ## What is a Programming Language?
 Charles Babbage’s [Analytical Engine](https://en.wikipedia.org/wiki/Analytical_Engine), designed circa 1833, was one of the first known general-purpose computers, which resembled in logical structure the electronic computers that rose to prominence in the 1940s and evolved to today’s modern computer. Less than a decade after Babbages’s Engine was first designed, [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) developed the first known computer program. These early computers were programmed using physical punched cards, and the language resembled modern-day [assembly languages](https://en.wikipedia.org/wiki/Assembly_language).
 
-Programming languages allow humans to easily interface with computers by writing formal sets of instructions. However, early programming languages developed for conventional use with electronic computers required **low-level**implementations due to limited computer memory and speed. “Low-level” programming languages, also called assembly languages, are simply languages with little abstraction - they closely correspond to the **machine code** instructions that the computer directly interprets to control the central processing unit (CPU). Machine code is “strictly numerical” in the sense that only consists of binary digits. As a result, it is difficult and time-consuming to directly program in.
+Programming languages allow humans to easily interface with computers by writing formal sets of instructions. However, early programming languages developed for conventional use with electronic computers required **low-level** implementations due to limited computer memory and speed. “Low-level” programming languages, also called assembly languages, are simply languages with little abstraction - they closely correspond to the **machine code** instructions that the computer directly interprets to control the central processing unit (CPU). Machine code is “strictly numerical” in the sense that only consists of binary digits. As a result, it is difficult and time-consuming to directly program in.
 
 As programming languages developed, a clear need for high-level languages emerged. Such languages are what we often recognize as the common programming languages of today, including Python, Java, and C, which allow programmers to abstract away from binary and instead write in easy-to-read, semi-English statements. The first high-level language emerged in the mid-1940s, opening the door for a new focus on language design and programming paradigm shifts.
 
@@ -25,13 +25,14 @@ Two main programming paradigms exist today: **imperative** and **declarative**. 
 
 This distinction feels rather abstract, so let’s use a specific example to illustrate the main differences between the two. Let’s say you want to create a function that adds up a list of numbers. In Java, an imperative language, you might create a new variable to store the cumulative sum and then loop through the list, successively adding each value to that cumulative sum. The updating state change that occurs within in loop is referred to as a **side effect**, which means that it has an effect outside of just returning a value.
 
-In Haskell, a functional programming language, loops (like for and while) aren’t necessary. Instead of updating the state of a program in a series of imperative statements, functional programs use recursion to successively apply functions to arguments - there is no “placeholder” variable that’s updated each run. Many programming languages share both elements of imperative and declarative styles, at times making it difficult to separate the two.
-One final example of a strictly declarative language is SQL. The following query shows how you _declare_ what you want instead of describing how to get it.
+In Haskell, a functional programming language, loops (like `for` and `while`) aren’t necessary. Instead of updating the state of a program in a series of imperative statements, functional programs use recursion to successively apply functions to arguments - there is no “placeholder” variable that’s updated each run. Many programming languages share both elements of imperative and declarative styles, at times making it difficult to separate the two.
+One final example of a strictly declarative language is SQL. The following query shows how you _declare_ what you want instead of describing how to get it:
+
 `SELECT score FROM games WHERE id < 100;`
 
 ### Program Compilation
 
-While high-level programming languages are generally easier for programmers to code in and understand, they cannot be directly executed by a computer’s CPU. **Compilation** is the process by which programs written in high-level languages are translated and processed into a lower-level language such as **machine code**(binary-like instructions). Compilation differs based on the programming language, but it often has several distinct steps that can be grouped into one of three stages: the front end, middle end, and back end.
+While high-level programming languages are generally easier for programmers to code in and understand, they cannot be directly executed by a computer’s CPU. **Compilation** is the process by which programs written in high-level languages are translated and processed into a lower-level language such as **machine code** (binary-like instructions). Compilation differs based on the programming language, but it often has several distinct steps that can be grouped into one of three stages: the front end, middle end, and back end.
 
 In the _front end_, the language-specific syntax and semantics are verified. This part of the front end is often itself divided into phases that include lexical analysis, syntax analysis, and semantic analysis. If the language is statically typed, then type checking is performed in this stage. The source code is translated into an intermediate representation (IR), a lower-lever representation that is used in the middle end.
 
@@ -39,14 +40,14 @@ Next, the _middle end_ optimizes the IR in a CPU-agnostic way, allowing for this
 
 
 ![Compiler](/images/compiler.png)
-From  [https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg](https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg) 
+_From [https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg](https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg)_
 
 Some programming languages, such as Python and Ruby, do not strictly use a compiler; instead, they use an **interpreter**, which is a piece of software that directly interprets and executes code instead of creating a separate, intermediary machine code file. Compiled programs typically have a lower code execution time because they have already been translated into machine code before runtime. 
 
 
 ### Typing
 
-Computer programs utilize type systems to reduce bugs and to make it easier for programs to reliably interface with each other. **Type checking**, the process by which a program verifies and enforces the constraints set forth by its type system, can either occur at compile time (called **static** checking) or at run-time (**dynamic** checking). Statically typed languages require you to declare the data type of a variable before using it (like `int num = 5` in Java) while dynamically typed languages do not (like `num = 5` in python).
+Computer programs utilize type systems to reduce bugs and to make it easier for programs to reliably interface with each other. **Type checking**, the process by which a program verifies and enforces the constraints set forth by its type system, can either occur at compile time (called **static** checking) or at run-time (**dynamic** checking). Statically typed languages require you to declare the data type of a variable before using it (like `int num = 5` in Java) while dynamically typed languages do not (like `num = 5` in Python).
 
 ## What’s Special About Motoko
 
