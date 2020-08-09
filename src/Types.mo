@@ -11,8 +11,8 @@ module {
     #sub: (Val);
     #concat: (Val);
     #eq: (Val);
-    #brancheq: (Val, Val);
-    #branchneq: (Val, Val);
+    #brancheq: (Val, Val); // To be implemented in Module 3 (typing)
+    #branchneq: (Val, Val); // To be implemented in Module 3 (typing)
   };
 
   public type Val = {
