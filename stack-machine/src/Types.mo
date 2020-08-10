@@ -21,7 +21,7 @@ module {
   public type Val = {
     #int: Int;
     #str: Text;
-    #bool: Bool; // To be implemented in Module 4 (branching)
+    #bool: Bool; // To be implemented in Module 3/4
   };
 
   /// Helper function that determines if two values are equal (in type and value).

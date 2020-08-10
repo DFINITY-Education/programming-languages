@@ -62,11 +62,13 @@ actor {
           case (#eq(operand)) {
             evalEq(v, operand)
           };
-          case (#brancheq(operand1, operand2)) {
-            evalBranchEq(v, operand1, operand2)
+          // To be implemented in Module 4
+          case (#brancheq(operand, jump)) {
+            evalBranchEq(v, operand, jump)
           };
-          case (#branchneq(operand1, operand2)) {
-            evalBranchNeq(v, operand1, operand2)
+          // To be implemented in Module 4
+          case (#branchneq(operand, jump)) {
+            evalBranchNeq(v, operand, jump)
           };
         }
       };
@@ -137,6 +139,13 @@ actor {
     #val(#bool(Types.valEq(val1, val2)))
   };
 
+  /// Skips over |jump| number of expressions in the stack if |val1| == |val2|.
+  /// Args:
+  ///   |val1|   First value.
+  ///   |val2|   Second value.
+  ///   |jump|   Number of expressions to "jump" in the stack - must be #int.
+  /// Returns:
+  ///   The original value, |val1|, if true; NOP otherwise
   func evalBranchEq(val1: Val, val2: Val, jump: Val) : Expr {
     switch (jump) {
       case (#int(j)) {
@@ -149,6 +158,13 @@ actor {
     }
   };
 
+  /// Skips over |jump| number of expressions in the stack if |val1| != |val2|.
+  /// Args:
+  ///   |val1|   First value.
+  ///   |val2|   Second value.
+  ///   |jump|   Number of expressions to "jump" in the stack - must be #int.
+  /// Returns:
+  ///   The original value, |val1|, if true; NOP otherwise
   func evalBranchNeq(val1: Val, val2: Val, jump: Val) : Expr {
     switch (jump) {
       case (#int(j)) {
