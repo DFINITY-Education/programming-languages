@@ -4,7 +4,7 @@ Now that you've built a functional stack machine, it's time to add a bit more ad
 
 This module further expands on the code written in the prior modules thus far. You will add two additional operators, enabling the parser to evaluate “if” statements and implement conditional branching.
 
-## YOUR TASK
+## Your Task
 In this exercise, you will implement two additional operators, `#branchEq`  and `#branchNeq`, and build out helper functions to process them, ultimately enabling basic branching capability in your stack machine.
 
 ### Code Understanding
@@ -54,4 +54,3 @@ Building canisters...
 > dfx canister call Test run
 ()
 ```
-

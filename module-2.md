@@ -32,7 +32,7 @@ The 1 + 1 evaluates to 2, which is pushed to the top of the stack:
 In this exercise, you will implement a simple stack machine like the one described above. This machine will perform most basic operations, like addition, subtraction, multiplication, and division, and you will have the opportunity to extend the functionality in modules 3 and 4.
 
 ### Code Understanding
-Let’s start by taking a look at _src/Types.mo_, which contains all of the relevant types for our stack machine.  The most basic atomic unit in our machine is a `#val`, or value, which preliminarily can take the form of an integer, boolean, or string. We’ve limited our machine to these three values for simplicity, but you could extend functionality by adding more value types. Next, an `#op`, or operator, represents an action that’s paired with a value. Operators range from addition and subtraction to `if` statements. Additionally, operators may only work with certain types (i.e. you cannot add a boolean and an integer), but this functionality need not be represented in our _Types.mo_ file (instead, it’s implemented in the evaluator itself - see [Module 3](#module-3-type-enforcement)). Finally, an `#Expr`, or expression, is the largest “unit” in our stack machine, composed of either an `#Op` or a `#Val`.
+Let’s start by taking a look at _src/Types.mo_, which contains all of the relevant types for our stack machine.  The most basic atomic unit in our machine is a `#val`, or value, which preliminarily can take the form of an integer, boolean, or string. We’ve limited our machine to these three values for simplicity, but you could extend functionality by adding more value types. Next, an `#op`, or operator, represents an action that’s paired with a value. Operators range from addition and subtraction to `if` statements. Additionally, operators may only work with certain types (i.e. you cannot add a boolean and an integer), but this functionality need not be represented in our _Types.mo_ file (instead, it’s implemented in the evaluator itself - see [Module 3](#module-3.md)). Finally, an `#Expr`, or expression, is the largest “unit” in our stack machine, composed of either an `#Op` or a `#Val`.
 
 Now let’s take a look at the implementation of our stack in _src/Stack.mo_. Here, you’ll find relevant helper functions for manipulating the stack, which is just implemented as a `List` in Motoko. You can `push` and `pop` elements from the top of the stack as well as `discard` the head of the stack or check if the stack `isEmpty`.
 
@@ -69,4 +69,3 @@ Building canisters...
 > dfx canister call Test run
 ()
 ```
-

@@ -1,12 +1,12 @@
 module {
 
-  // An expression is either an operator or a singular value
+  // An expression is either an operator or a singular value.
   public type Expr = {
     #op: Op;
     #val: Val;
   };
 
-  // All possible operations in our stack machine
+  // All possible operations in our stack machine.
   public type Op = {
     #nop;
     #add: (Val);
@@ -17,7 +17,7 @@ module {
     #branchneq: (Val, Val); // To be implemented in Module 4 (branching)
   };
 
-  // All possible atomic values in our stack machine
+  // All possible atomic value types in our stack machine.
   public type Val = {
     #int: Int;
     #str: Text;
@@ -29,7 +29,7 @@ module {
   ///   |val1|   First value.
   ///   |val2|   Second value.
   /// Returns:
-  ///   #val(#bool(True)) when vaues are equal, #val(#bool(False)) otherwisen
+  ///   True if the two values are equal, False otherwise.
   public func valEq(val1: Val, val2: Val) : Bool {
     switch (val1, val2) {
       case (#int(i1), #int(i2)) i1 == i2;

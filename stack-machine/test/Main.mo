@@ -1,4 +1,5 @@
-import Stack "../src/Main";
+import StackMachine "canister:StackMachine";
+
 import Types "../src/Types";
 
 actor {
@@ -17,7 +18,7 @@ actor {
   public func run() {
     for (test in tests.vals()) {
       setup();
-      await test();
+      test();
       tearDown();
     };
   };

@@ -10,15 +10,16 @@ actor {
   type Val = Types.Val;
   type Op = Types.Op;
 
-  // An empty expression that evaluates to nothing
+  // An empty expression that evaluates to nothing.
   let NOP: Expr = #op(#nop);
-  // The stack that holds queued expressions
+  // The stack that holds queued expressions.
   var stack = Stack.Stack();
 
   /// Evaluates expressions held in the stack.
   /// Returns:
   ///   The final value that the stack evaulates to.
-  ///   Possible errors: #err if the final expression in the stack (once evaluated) is not a #val.
+  ///   Possible errors: #err() if the final expression in the stack (once
+  ///   evaluated) is not a #val.
   public func eval() : async Result.Result<Val, ()> {
     var currentExpr = NOP;
     while (not stack.isEmpty()) {
@@ -134,7 +135,7 @@ actor {
   ///   |val1|   First value.
   ///   |val2|   Second value.
   /// Returns:
-  ///   #val(#bool(True)) when vaues are equal, #val(#bool(False)) otherwise
+  ///   #val(#bool(True)) when vaues are equal, #val(#bool(False)) otherwise.
   func evalEq(val1: Val, val2: Val) : Expr {
     #val(#bool(Types.valEq(val1, val2)))
   };
@@ -145,7 +146,7 @@ actor {
   ///   |val2|   Second value.
   ///   |jump|   Number of expressions to "jump" in the stack - must be #int.
   /// Returns:
-  ///   The original value, |val1|, if true; NOP otherwise
+  ///   The original value, |val1|, if true; NOP otherwise.
   func evalBranchEq(val1: Val, val2: Val, jump: Val) : Expr {
     switch (jump) {
       case (#int(j)) {
@@ -164,7 +165,7 @@ actor {
   ///   |val2|   Second value.
   ///   |jump|   Number of expressions to "jump" in the stack - must be #int.
   /// Returns:
-  ///   The original value, |val1|, if true; NOP otherwise
+  ///   The original value, |val1|, if true; NOP otherwise.
   func evalBranchNeq(val1: Val, val2: Val, jump: Val) : Expr {
     switch (jump) {
       case (#int(j)) {

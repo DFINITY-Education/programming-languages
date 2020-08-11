@@ -2,7 +2,7 @@
 
 In this module, students will build upon their previous implementation of the stack machine in Module 2 to add in typing enforcement. As expressions are evaluated...
 
-## YOUR TASK
+## Your Task
 **TO-DO: Implementation of a more robust typing system in the source code must be completed before this module can be documented.**
 
 ### Testing
@@ -21,4 +21,3 @@ Building canisters...
 > dfx canister call Test run
 ()
 ```
-
