@@ -25,7 +25,7 @@ Two main programming paradigms exist today: **imperative** and **declarative**. 
 
 This distinction feels rather abstract, so let’s use a specific example to illustrate the main differences between the two. Let’s say you want to create a function that adds up a list of numbers. In Java, an imperative language, you might create a new variable to store the cumulative sum and then loop through the list, successively adding each value to that cumulative sum. The updating state change that occurs within in loop is referred to as a **side effect**, which means that it has an effect outside of just returning a value.
 
-In Haskell, a functional programming language, loops (like `for` and `while`) aren’t necessary. Instead of updating the state of a program in a series of imperative statements, functional programs use recursion to successively apply functions to arguments - there is no “placeholder” variable that’s updated each run. Many programming languages share both elements of imperative and declarative styles, at times making it difficult to separate the two.
+In Haskell, a functional programming language, loops (like `for` and `while`) aren’t necessary (or allowed). Instead of updating the state of a program in a series of imperative statements, functional programs use recursion to successively apply functions to arguments - there is no “placeholder” variable that’s updated each run. Many programming languages share both elements of imperative and declarative styles, at times making it difficult to separate the two.
 One final example of a strictly declarative language is SQL. The following query shows how you _declare_ what you want instead of describing how to get it:
 
 `SELECT score FROM games WHERE id < 100;`
