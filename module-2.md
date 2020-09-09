@@ -52,7 +52,7 @@ Finally, let’s turn to the file where our evaluator is held: _src/Main.mo_. Th
 
 **Things To Consider:**
 * Every stack will start with a “seed” value. That is, a singular value (without an operation) that all other lines in the stack will build upon. In the example above for `2 + 3`, `2` was our seed value. As a result, `eval` should distinctly handle `#val`s and `#op`s as it pops them off the stack. A `#val` will only every occur at the topmost position in the stack - `#val`s occurring later in the stack will be wrapped in `#op`s, as a lone value has no context and can not be interpreted.
-* `eval` should continue running until the stack in empty, at which point the current value should be returned.
+* `eval` should continue running until the stack is empty, at which point the current value should be returned.
 * Make sure to call `evalOp` to evaluate each item that you remove from the stack. 
 
 ### Testing
