@@ -58,6 +58,8 @@ Finally, let’s turn to the file where our evaluator is held: _src/Main.mo_. Th
 ### Testing
 The following test should run to completion:
 ```bash
+> dfx start --background
+> dfx canister create --all
 > dfx build
 Building canisters...
 
