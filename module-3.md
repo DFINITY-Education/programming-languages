@@ -10,6 +10,8 @@ In this module, students will build upon their previous implementation of the st
 The following test should run to completion:
 
 ```bash
+> dfx start --background
+> dfx canister create --all
 > dfx build
 Building canisters...
 
