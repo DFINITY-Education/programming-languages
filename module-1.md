@@ -38,9 +38,9 @@ In the _front end_, the language-specific syntax and semantics are verified. Thi
 
 Next, the _middle end_ optimizes the IR in a CPU-agnostic way, allowing for this step to be carried out similarly regardless of computer architecture. Finally, the _back end_takes the optimized IR and translates it into machine code specific to that computer’s CPU and operating system. 
 
+<p align="center"><img src="/images/compiler.png" height="150"/> </p>
 
-![Compiler](/images/compiler.png)
-_From [https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg](https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg)_
+<p align="center"> <i>The three-step process of program compilation. Source: <a href="https://en.wikipedia.org/wiki/Compiler#/media/File:Compiler_design.svg">Complier Design Wiki</a></i></p>
 
 Some programming languages, such as Python and Ruby, do not strictly use a compiler; instead, they use an **interpreter**, which is a piece of software that directly interprets and executes code instead of creating a separate, intermediary machine code file. Compiled programs typically have a lower code execution time because they have already been translated into machine code before runtime. 
 
@@ -57,7 +57,8 @@ The Internet Computer does not directly run machine code, as a CPU might. Instea
 
 As WebAssembly is a low-level language, developers do not directly code in it. Instead, they write in a higher-level language like Rust or C, which then complies into WebAssembly binary code. This binary code is ultimately what’s run on the Internet Computer. 
 
-![Wasm](images/wasm.png)
+<p align="center"><img src="images/wasm.png" height="300"/> </p>
+<p align="center"> <i>Motoko compilation process</i></p>
 
 ### Why Motoko?
 
