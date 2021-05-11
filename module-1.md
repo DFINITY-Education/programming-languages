@@ -5,7 +5,7 @@
     - [Types of Programming Languages](#Types-of-Programming-Languages)
 	- [Program Compilation](#Program-Compilation)
 	- [Typing](#typing)
-3. [What’s Special About Motoko?](#What’s-Special-About-Motoko)
+3. [What’s Special About Motoko?](#Whats-Special-About-Motoko)
 	- [WebAssembly](#WebAssembly)
 	- [Why Motoko?](#why-motoko)
 	- [Key Design Points](#key-design-points)
