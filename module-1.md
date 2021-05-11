@@ -1,13 +1,13 @@
 # Module 1: The Anatomy of Programming Languages
 #### Outline
-1. [What is a Programming Language?](#what-is-a-programming-language?)
+1. [What is a Programming Language?](#what-is-a-programming-language)
 2. [Modern Programming Language Architecture](#modern-programming-language-architecture)
     - [Types of Programming Languages](#Types-of-Programming-Languages)
 	- [Program Compilation](#Program-Compilation)
 	- [Typing](#typing)
-3. [What’s Special About Motoko?](#What’s-Special-About-Motoko?)
+3. [What’s Special About Motoko?](#What’s-Special-About-Motoko)
 	- [WebAssembly](#WebAssembly)
-	- [Why Motoko?](#why-motoko?)
+	- [Why Motoko?](#why-motoko)
 	- [Key Design Points](#key-design-points)
 
 ## What is a Programming Language?
