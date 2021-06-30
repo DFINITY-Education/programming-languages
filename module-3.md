@@ -10,12 +10,13 @@ In this module, students will build upon their previous implementation of the st
 The following test should run to completion:
 
 ```bash
-> dfx build
+> dfx deploy
+Deploying all canisters.
+All canisters have already been created.
 Building canisters...
+Installing canisters...
+Upgrading code for canister StackMachine, with canister_id renrk-eyaaa-aaaaa-aaada-cai
 
-> dfx canister install --all
-"StackMachine" canister created with canister id: "ic:..."
-"Test" canister created with canister id: "ic:..."
 ...
 
 > dfx canister call Test run

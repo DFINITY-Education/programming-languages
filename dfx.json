@@ -1,0 +1,13 @@
+{
+  "dfx": "0.7.2",
+  "canisters": {
+    "StackMachine": {
+      "main": "src/Main.mo",
+      "type": "motoko"
+    },
+    "Test": {
+      "main": "test/Main.mo",
+      "type": "motoko"
+    }
+  }
+}

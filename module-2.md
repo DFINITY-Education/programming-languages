@@ -58,12 +58,16 @@ Finally, let’s turn to the file where our evaluator is held: _src/Main.mo_. Th
 ### Testing
 The following test should run to completion:
 ```bash
-> dfx build
+> dfx deploy
+Deploying all canisters.
+Creating canisters...
+Creating canister "StackMachine"...
+"StackMachine" canister created with canister id: "renrk-eyaaa-aaaaa-aaada-cai"
+Creating canister "Test"...
+"Test" canister created with canister id: "rdmx6-jaaaa-aaaaa-aaadq-cai"
 Building canisters...
+Installing canisters...
 
-> dfx canister install --all
-"StackMachine" canister created with canister id: "ic:..."
-"Test" canister created with canister id: "ic:..."
 ...
 
 > dfx canister call Test run
