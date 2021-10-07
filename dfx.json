@@ -1,5 +1,4 @@
 {
-  "dfx": "0.7.2",
   "canisters": {
     "StackMachine": {
       "main": "src/Main.mo",
@@ -9,5 +8,7 @@
       "main": "test/Main.mo",
       "type": "motoko"
     }
-  }
+  },
+  "dfx": "0.8.1",
+  "version": 1
 }
