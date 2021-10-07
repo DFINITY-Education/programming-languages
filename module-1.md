@@ -68,7 +68,7 @@ Additionally, Motoko:
 * Seamlessly fits the Internet Computer blockchain network by specifically targeting WebAssembly
 * Maintains features built with the Internet Computer in mind, such as canister smart contracts and caller identity
 * Provides built-in support for inter-canister calls with `async` and `await`
-* Promotes language interoperability through the use of Candid, an interface definition language that allows canister smart contracts implemented in different languages to communicate with each other.
+* Promotes language interoperability through the use of Candid, an interface definition language that allows canister smart contracts implemented in different languages to communicate with each other
 
 
 While Motoko is optimized for the Internet Computer, it is not the only language, nor always the best language, for every distributed application. Generally, however, developers will find it easiest to author Internet Computer canister smart constracts using Motoko.
