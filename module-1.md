@@ -65,13 +65,13 @@ As WebAssembly is a low-level language, developers do not directly code in it. I
 Although there are several prominent languages available for WebAssembly development, none were built with the Internet Computer in mind.  [Motoko](https://sdk.dfinity.org/docs/language-guide/motoko.html)  was designed specifically for the Internet Computer and built with a focus on familiarity, safety, and compatibility. Developers will find familiarity in the syntax of Motoko, which borrows successful elements from other popular languages. 
 
 Additionally, Motoko:
-* Seamlessly fits the Internet Computer platform by specifically targeting WebAssembly
-* Maintains features built with the Internet Computer in mind, such as canisters and caller identity
+* Seamlessly fits the Internet Computer blockchain network by specifically targeting WebAssembly
+* Maintains features built with the Internet Computer in mind, such as canister smart contracts and caller identity
 * Provides built-in support for inter-canister calls with `async` and `await`
-* Promotes language interoperability through the use of Candid, a language that allows canisters written in different languages to communicate with each other
+* Promotes language interoperability through the use of Candid, an interface definition language that allows canister smart contracts implemented in different languages to communicate with each other.
 
 
-While Motoko is optimized for the Internet Computer, it is not the only language, nor always the best language, for the platform. Generally, however, developers will find it easiest to write code for Internet Computer canisters using Motoko.
+While Motoko is optimized for the Internet Computer, it is not the only language, nor always the best language, for every distributed application. Generally, however, developers will find it easiest to author Internet Computer canister smart constracts using Motoko.
 
 ### Key Design Points
 
